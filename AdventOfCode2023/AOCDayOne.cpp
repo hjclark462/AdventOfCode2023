@@ -40,10 +40,12 @@ void AOCDayOne::Solve()
 					if (f < forward)
 					{
 						first = (char)(i + 1);
+						forward = f;
 					}
 					if (b > backwards)
 					{
 						second = (char)(i + 1);
+						backwards = b;
 					}
 				}
 				for (int i = 0; i < (forward < line.size() ? forward : line.size()-1); i++)
@@ -54,7 +56,7 @@ void AOCDayOne::Solve()
 						i = line.size();
 					}
 				}
-				for (int i = line.size() - 1; i >= (backwards > 0 ? backwards : 0); i--)
+				for (int i = line.size() - 1; i > (backwards > 0 ? backwards : 0); i--)
 				{
 					if (isdigit(line.at(i)))
 					{
