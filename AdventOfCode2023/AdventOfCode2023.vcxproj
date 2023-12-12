@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AOCDayOne.cpp" />
     <ClCompile Include="Entrance.cpp" />
     <ClCompile Include="Executor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AOCDayOne.h" />
     <ClInclude Include="Executor.h" />
     <ClInclude Include="Program.h" />
   </ItemGroup>

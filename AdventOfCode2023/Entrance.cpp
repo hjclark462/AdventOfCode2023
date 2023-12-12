@@ -1,9 +1,11 @@
 #include "Executor.h"
+#include "AOCDayOne.h"
+
 int main()
 {
-Executor exe = Executor(new Program());
+	Executor exe(new AOCDayOne());
 
-exe.Update();
+	exe.Start();
 
-return 0;
+	return 0;
 }
