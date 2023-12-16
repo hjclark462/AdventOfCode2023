@@ -1,39 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Day1">
+      <UniqueIdentifier>{a55ccc80-78f4-4170-949c-c24d78e80405}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="Base Program">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Day2">
+      <UniqueIdentifier>{fdb67a78-bdfa-4387-9edf-c29c2606b12a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Entrance.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="AOCDayOne.cpp">
+      <Filter>Day1</Filter>
     </ClCompile>
     <ClCompile Include="Executor.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Base Program</Filter>
     </ClCompile>
-    <ClCompile Include="AOCDayOne.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Entrance.cpp">
+      <Filter>Base Program</Filter>
+    </ClCompile>
+    <ClCompile Include="AOCDayTwo.cpp">
+      <Filter>Day2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Executor.h">
-      <Filter>Header Files</Filter>
+      <Filter>Base Program</Filter>
     </ClInclude>
     <ClInclude Include="Program.h">
-      <Filter>Header Files</Filter>
+      <Filter>Base Program</Filter>
     </ClInclude>
     <ClInclude Include="AOCDayOne.h">
-      <Filter>Header Files</Filter>
+      <Filter>Day1</Filter>
+    </ClInclude>
+    <ClInclude Include="AOCDayTwo.h">
+      <Filter>Day2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -14,7 +14,7 @@ public:
 	Executor(const Executor& other) = delete;
 	Executor& operator=(const Executor& other) = delete;
 
-	void Start();
+	void Start(bool part);
 	void Update(float dt);
 
 	bool IsRunning() const;

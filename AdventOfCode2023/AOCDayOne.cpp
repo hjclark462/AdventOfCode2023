@@ -12,68 +12,84 @@ void AOCDayOne::Update(float dt)
 {
 }
 
-void AOCDayOne::Solve()
+void AOCDayOne::Solve(bool part)
 {
 	int sum = 0;
-	std::vector<std::string> numberString;
-	int forward = INT_MAX;
-	int backwards = -1;
-	char first = {};
-	char second = {};
+	std::vector<int> numberString;
 	std::string line;
 	std::fstream calibrationValues;
-	calibrationValues.open("test.txt", std::ios::in);
+	calibrationValues.open("input.txt", std::ios::in);
 	if (calibrationValues.is_open())
 	{
 		while (!calibrationValues.eof())
 		{
-			std::vector<std::string> numbers;
-			std::vector<int> digits;
+			int first = -1;
+			int second = -1;			
 			line.clear();
 			std::getline(calibrationValues, line);
 			if (!line.empty())
 			{
-				for (int i = 0; i < numberString.size(); i++)
-				{
-					int f = line.find_first_of(numberString[i]);
-					int b = line.find_last_of(numberString[i]);
-					if (f < forward)
-					{
-						first = (char)(i + 1);
-						forward = f;
-					}
-					if (b > backwards)
-					{
-						second = (char)(i + 1);
-						backwards = b;
-					}
-				}
-				for (int i = 0; i < (forward < line.size() ? forward : line.size()-1); i++)
+				int forward = line.size()-1;
+				int backwards = 0;
+				for (int i = 0; i < line.size(); i++)
 				{
 					if (isdigit(line.at(i)))
 					{
-						first = line.at(i);
+						std::string dig = { line[i] };
+						first = std::stoi(dig);
+						forward = i;
 						i = line.size();
 					}
 				}
-				for (int i = line.size() - 1; i > (backwards > 0 ? backwards : 0); i--)
+				for (int i = line.size() - 1; i > 0; i--)
 				{
 					if (isdigit(line.at(i)))
 					{
-						second = line.at(i);
+						std::string dig = { line[i] };
+						second = std::stoi(dig);
+						backwards = i;
 						i = -1;
 					}
 				}
-				std::stringstream ss;
-				ss << first << second;
-				numberString.push_back(ss.str());
+				if (part)
+				{
+					for (int i = 0; i < numStrings.size(); i++)
+					{
+						std::int32_t f = line.find(numStrings[i]);
+						std::int32_t b = line.rfind(numStrings[i]);
+						if (f != std::string::npos && f < forward)
+						{
+							first = std::stoi(stringNums[i]);
+							forward = f;
+						}
+						if (b != std::string::npos && b > backwards)
+						{
+							second = std::stoi(stringNums[i]);
+							backwards = b;
+						}
+					}
+				}
+				if (first == -1 && second != -1)
+				{
+					first = second;
+				}
+				else if (first != -1 && second == -1)
+				{
+					second = first;
+				}
+				int ss = first * 10 + second;
+				numberString.push_back(ss);
 			}
 		}
 	}
 	calibrationValues.close();
-	for (std::string s : numberString)
+	for (int s : numberString)
 	{
-		sum += std::stoi(s);
+		if (s >= 100 || s <=9)
+		{
+			std::cout << "fuck " << s << std::endl;
+		}
+		sum += s;
 	}
 
 	std::cout << "The answer is " << sum;

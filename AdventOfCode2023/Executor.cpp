@@ -15,14 +15,14 @@ Executor::~Executor()
 	delete m_program;
 }
 
-void Executor::Start()
+void Executor::Start(bool part)
 {
 	m_running = true;
 	double fps = 1 / fixedFPS;
 	time_t curTime = time(&curTime);	
 	double accumulator = 0.0;
 
-	m_program->Solve();
+	m_program->Solve(part);
 	while (IsRunning())
 	{
 		time_t newTime = time(&newTime);

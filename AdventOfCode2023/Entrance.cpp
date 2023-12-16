@@ -5,7 +5,7 @@ int main()
 {
 	Executor exe(new AOCDayOne());
 
-	exe.Start();
+	exe.Start(true);
 
 	return 0;
 }
