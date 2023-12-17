@@ -1,9 +1,9 @@
 #include "Executor.h"
-#include "AOCDayOne.h"
+#include "AOCDayThree.h"
 
 int main()
 {
-	Executor exe(new AOCDayOne());
+	Executor exe(new AOCDayThree());
 
 	exe.Start(true);
 

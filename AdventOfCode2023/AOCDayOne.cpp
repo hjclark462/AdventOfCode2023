@@ -16,9 +16,8 @@ void AOCDayOne::Solve(bool part)
 {
 	int sum = 0;
 	std::vector<int> numberString;
-	std::string line;
-	std::fstream calibrationValues;
-	calibrationValues.open("input.txt", std::ios::in);
+	std::string line; 
+	calibrationValues.open(files[0], std::ios::in);
 	if (calibrationValues.is_open())
 	{
 		while (!calibrationValues.eof())
