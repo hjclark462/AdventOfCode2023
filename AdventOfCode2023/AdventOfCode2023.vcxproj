@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AOCDayFour.cpp" />
     <ClCompile Include="AOCDayOne.cpp" />
     <ClCompile Include="AOCDayThree.cpp" />
     <ClCompile Include="AOCDayTwo.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Executor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AOCDayFour.h" />
     <ClInclude Include="AOCDayOne.h" />
     <ClInclude Include="AOCDayThree.h" />
     <ClInclude Include="AOCDayTwo.h" />

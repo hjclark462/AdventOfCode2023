@@ -7,16 +7,16 @@
 #include <tuple>
 #include <algorithm>
 
-class AOCDayThree :  public Program
+class AOCDayFour : public Program
 {
 public:
-	AOCDayThree();
-	~AOCDayThree();
+	AOCDayFour();
+	~AOCDayFour();
 
 	virtual void Update(float dt);
 	virtual void Solve(bool part) override;
 private:
-	std::fstream gameRecords;
-	std::vector<std::string> files = { "input3.txt", "test.txt" };
+	std::fstream scratchCards;
+	std::vector<std::string> files = { "input4.txt", "test.txt" };
 };
 

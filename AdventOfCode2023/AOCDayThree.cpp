@@ -44,6 +44,14 @@ void AOCDayThree::Solve(bool part)
 		{
 			if (current[i] == '*')
 			{
+				if (numStart >= 0)
+				{
+					numEnd = i - 1;
+					nums.push_back({ digit, numStart, numEnd, row });
+					digit.clear();
+					numStart = -1;
+					numEnd = -1;
+				}
 				gears.push_back({ row, i, });
 				gearRatio.push_back({ 1,0 });
 			}
@@ -495,7 +503,7 @@ void AOCDayThree::Solve(bool part)
 		}
 		for (std::pair<int, int> s : gearRatio)
 		{
-			if (s.second > 1)
+			if (s.second == 2)
 			{
 				sum += s.first;
 			}

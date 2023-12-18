@@ -83,11 +83,7 @@ void AOCDayOne::Solve(bool part)
 	}
 	calibrationValues.close();
 	for (int s : numberString)
-	{
-		if (s >= 100 || s <=9)
-		{
-			std::cout << "fuck " << s << std::endl;
-		}
+	{		
 		sum += s;
 	}
 

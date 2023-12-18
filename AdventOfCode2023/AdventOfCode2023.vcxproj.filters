@@ -14,6 +14,9 @@
     <Filter Include="Day3">
       <UniqueIdentifier>{93d2e029-d145-45ad-9c3a-015aefb47607}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Day4">
+      <UniqueIdentifier>{8fb2983d-f14d-4adc-aa1f-8de0abf2581e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AOCDayOne.cpp">
@@ -31,6 +34,9 @@
     <ClCompile Include="AOCDayThree.cpp">
       <Filter>Day3</Filter>
     </ClCompile>
+    <ClCompile Include="AOCDayFour.cpp">
+      <Filter>Day4</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Executor.h">
@@ -47,6 +53,9 @@
     </ClInclude>
     <ClInclude Include="AOCDayThree.h">
       <Filter>Day3</Filter>
+    </ClInclude>
+    <ClInclude Include="AOCDayFour.h">
+      <Filter>Day4</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
